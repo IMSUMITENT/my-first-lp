@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAFÉ MORI | 森の中の、静かな一杯</title>
+<meta name="description" content="CAFÉ MORI(カフェ・モリ)は、緑に囲まれた隠れ家のようなコーヒーショップです。厳選した豆で淹れる一杯と、静かなひとときをお楽しみください。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a href="#hero" class="logo">CAFÉ <span>MORI</span></a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="#hero" class="nav-link">HOME</a></li>
+        <li><a href="#about" class="nav-link">ABOUT</a></li>
+        <li><a href="#menu" class="nav-link">MENU</a></li>
+        <li><a href="#access" class="nav-link">ACCESS</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content" data-reveal>
+      <p class="hero-eyebrow">SPECIALTY COFFEE &amp; ROASTERY</p>
+      <h1 class="hero-title">静けさの中で、<br>一杯のコーヒーを。</h1>
+      <p class="hero-lead">木々に囲まれた小さな森のカフェ、CAFÉ MORI。<br class="br-pc">厳選した豆と丁寧な抽出で、心が整うひとときをお届けします。</p>
+      <a href="#menu" class="btn btn-primary">メニューを見る</a>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="下にスクロール">
+      <span class="scroll-cue-line"></span>
+      <span class="scroll-cue-text">SCROLL</span>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image" data-reveal>
+          <div class="about-image-frame"></div>
+        </div>
+        <div class="about-text" data-reveal>
+          <p class="section-eyebrow">ABOUT US</p>
+          <h2 class="section-title">森の匂いと、<br>コーヒーの香り。</h2>
+          <p class="about-desc">
+            CAFÉ MORIは、都会の喧騒から少し離れた場所にたたずむ小さなコーヒーショップです。
+            世界各地の農園から届く厳選したスペシャルティコーヒーを、店内の焙煎機で丁寧に自家焙煎。
+            一杯ずつハンドドリップで淹れる香り高いコーヒーと、木の温もりに包まれた空間で、
+            忙しない日常からほんの少し離れた時間をお過ごしください。
+          </p>
+          <ul class="about-points">
+            <li><span class="point-num">01</span>自家焙煎の新鮮な豆</li>
+            <li><span class="point-num">02</span>一杯ずつ丁寧にハンドドリップ</li>
+            <li><span class="point-num">03</span>緑に囲まれた居心地の良い空間</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <p class="section-eyebrow center">MENU</p>
+      <h2 class="section-title center">おすすめメニュー</h2>
+      <p class="section-lead center">季節ごとに移り変わる、森のカフェの定番メニューをご紹介します。</p>
+
+      <div class="menu-grid" data-reveal>
+        <article class="menu-card">
+          <div class="menu-card-img" data-icon="coffee"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-head">
+              <h3>森のブレンド</h3>
+              <span class="menu-price">¥580</span>
+            </div>
+            <p>MORI特製のオリジナルブレンド。木の実のような香ばしさと、すっきりとした後味が特徴です。</p>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-card-img" data-icon="latte"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-head">
+              <h3>カフェラテ</h3>
+              <span class="menu-price">¥650</span>
+            </div>
+            <p>濃厚なエスプレッソと自家製ミルクフォームが織りなす、なめらかな口当たりの一杯。</p>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-card-img" data-icon="drip"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-head">
+              <h3>シングルオリジン</h3>
+              <span class="menu-price">¥720</span>
+            </div>
+            <p>月替わりで登場する、産地ごとの個性が際立つハンドドリップコーヒー。</p>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-card-img" data-icon="cake"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-head">
+              <h3>森のチーズケーキ</h3>
+              <span class="menu-price">¥480</span>
+            </div>
+            <p>自家製の濃厚なベイクドチーズケーキ。コーヒーとの相性は格別です。</p>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-card-img" data-icon="tea"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-head">
+              <h3>ハーブティー</h3>
+              <span class="menu-price">¥600</span>
+            </div>
+            <p>自家栽培のハーブをブレンドした、心も体もほっとする一杯。</p>
+          </div>
+        </article>
+
+        <article class="menu-card">
+          <div class="menu-card-img" data-icon="scone"></div>
+          <div class="menu-card-body">
+            <div class="menu-card-head">
+              <h3>焼き立てスコーン</h3>
+              <span class="menu-price">¥420</span>
+            </div>
+            <p>毎朝店内で焼き上げる、バターの香り豊かなプレーンスコーン。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACCESS ===== -->
+  <section class="access" id="access">
+    <div class="container">
+      <p class="section-eyebrow center">ACCESS</p>
+      <h2 class="section-title center">アクセス</h2>
+
+      <div class="access-grid" data-reveal>
+        <div class="access-info">
+          <dl>
+            <div class="access-row">
+              <dt>店名</dt>
+              <dd>CAFÉ MORI（カフェ・モリ）</dd>
+            </div>
+            <div class="access-row">
+              <dt>住所</dt>
+              <dd>〒150-0001<br>東京都渋谷区神宮前 3-3-3 森ビル 1F</dd>
+            </div>
+            <div class="access-row">
+              <dt>営業時間</dt>
+              <dd>平日 8:00 - 19:00<br>土日祝 9:00 - 20:00</dd>
+            </div>
+            <div class="access-row">
+              <dt>定休日</dt>
+              <dd>毎週火曜日</dd>
+            </div>
+            <div class="access-row">
+              <dt>アクセス</dt>
+              <dd>東京メトロ「表参道」駅より徒歩5分</dd>
+            </div>
+            <div class="access-row">
+              <dt>電話</dt>
+              <dd>03-1234-5678</dd>
+            </div>
+          </dl>
+          <a href="#hero" class="btn btn-outline">トップへ戻る</a>
+        </div>
+
+        <div class="access-map" aria-hidden="true">
+          <div class="access-map-inner">
+            <span class="map-pin"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 CAFÉ MORI. All rights reserved.</p>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="ページトップへ戻る">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
