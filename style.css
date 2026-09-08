@@ -535,6 +535,94 @@ ul { list-style: none; margin: 0; padding: 0; }
   border-radius: 50%;
 }
 
+/* ---------- Contact ---------- */
+.contact {
+  padding: 140px 0;
+  background: var(--color-bg-alt);
+  scroll-margin-top: 84px;
+}
+
+.contact-form {
+  max-width: 620px;
+  margin: 64px auto 0;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: var(--color-forest-dark);
+  margin-bottom: 12px;
+}
+
+.form-required {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--color-cream);
+  background: var(--color-gold);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-ink);
+  background: var(--color-cream);
+  border: 1px solid var(--color-line);
+  border-radius: 6px;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(184, 146, 90, 0.18);
+}
+
+.form-group.has-error input,
+.form-group.has-error textarea {
+  border-color: #b5504a;
+}
+
+.form-error {
+  min-height: 1.2em;
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  color: #b5504a;
+}
+
+.contact-submit {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background: var(--color-forest);
+  color: var(--color-cream);
+  border: none;
+}
+.contact-submit:hover {
+  background: var(--color-forest-dark);
+  transform: translateY(-2px);
+}
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--color-forest-dark);
@@ -615,5 +703,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 
   .access-row { grid-template-columns: 84px 1fr; }
 
-  .about, .menu, .access { padding: 96px 0; }
+  .about, .menu, .access, .contact { padding: 96px 0; }
+  .contact-form { margin-top: 44px; }
 }

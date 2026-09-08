@@ -93,4 +93,64 @@ document.addEventListener('DOMContentLoaded', () => {
   );
 
   revealTargets.forEach((el) => revealObserver.observe(el));
+
+  /* ---------- Contact form validation ---------- */
+  const contactForm = document.getElementById('contactForm');
+
+  if (contactForm) {
+    const nameInput = document.getElementById('contactName');
+    const emailInput = document.getElementById('contactEmail');
+    const messageInput = document.getElementById('contactMessage');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const setError = (input, errorId, message) => {
+      const errorEl = document.getElementById(errorId);
+      const group = input.closest('.form-group');
+      errorEl.textContent = message;
+      group.classList.toggle('has-error', Boolean(message));
+    };
+
+    const validateField = (input, errorId) => {
+      const value = input.value.trim();
+
+      if (!value) {
+        setError(input, errorId, 'この項目は必須です。');
+        return false;
+      }
+
+      if (input === emailInput && !emailPattern.test(value)) {
+        setError(input, errorId, 'メールアドレスの形式が正しくありません。');
+        return false;
+      }
+
+      setError(input, errorId, '');
+      return true;
+    };
+
+    [
+      [nameInput, 'contactNameError'],
+      [emailInput, 'contactEmailError'],
+      [messageInput, 'contactMessageError'],
+    ].forEach(([input, errorId]) => {
+      input.addEventListener('blur', () => validateField(input, errorId));
+    });
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const isNameValid = validateField(nameInput, 'contactNameError');
+      const isEmailValid = validateField(emailInput, 'contactEmailError');
+      const isMessageValid = validateField(messageInput, 'contactMessageError');
+
+      if (!isNameValid || !isEmailValid || !isMessageValid) {
+        return;
+      }
+
+      alert('送信しました');
+      contactForm.reset();
+      contactForm.querySelectorAll('.form-group.has-error').forEach((group) => {
+        group.classList.remove('has-error');
+      });
+    });
+  }
 });
